@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLOSSUS | Bio-Terminal</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --panel-bg: #1a1a1a;
+            --text-main: #e0e0e0;
+            --accent-grey: #404040;
+            --status-blue: #0088ff;
+            --status-green: #00ff88;
+            --status-red: #ff4444;
+        }
 
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .terminal-container {
+            width: 100%;
+            max-width: 500px;
+            border: 2px solid var(--accent-grey);
+            padding: 20px;
+            background: var(--panel-bg);
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        header {
+            border-bottom: 1px solid var(--accent-grey);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-line { margin: 5px 0; font-size: 0.9rem; }
+        .highlight-blue { color: var(--status-blue); font-weight: bold; }
+
+        .xp-container {
+            width: 100%;
+            height: 10px;
+            background: #000;
+            border: 1px solid var(--accent-grey);
+            margin-top: 10px;
+        }
+
+        .xp-bar {
+            width: 15%; /* Placeholder XP */
+            height: 100%;
+            background: var(--status-blue);
+        }
+
+        .anatomy-section {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        svg {
+            width: 200px;
+            filter: drop-shadow(0 0 5px var(--status-blue));
+        }
+
+        .label {
+            font-size: 10px;
+            fill: var(--text-main);
+        }
+
+        .ai-feedback {
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 3px solid var(--status-red);
+            background: rgba(255, 68, 68, 0.05);
+            font-style: italic;
+        }
+
+        .status-tag {
+            font-size: 0.7rem;
+            padding: 2px 5px;
+            border: 1px solid var(--accent-grey);
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="terminal-container">
+    <header>
+        <div class="stat-line">SUBJECT: <span class="highlight-blue">User_14</span></div>
+        <div class="stat-line">RANK: <span style="color: var(--status-green);">Chunky Tank</span></div>
+        <div class="stat-line">HEIGHT: 183CM | WEIGHT: 85KG</div>
+        <div class="xp-container"><div class="xp-bar"></div></div>
+        <div class="stat-line" style="font-size: 0.7rem; text-align: right;">LEVEL 1 [15/100 XP]</div>
+    </header>
+
+    <div class="anatomy-section">
+        <svg viewBox="0 0 100 150">
+            <!-- Simple Stick Figure -->
+            <circle cx="50" cy="20" r="8" stroke="white" stroke-width="2" fill="none" />
+            <line x1="50" y1="28" x2="50" y2="70" stroke="white" stroke-width="2" />
+            <line x1="50" y1="40" x2="25" y2="60" stroke="white" stroke-width="2" />
+            <line x1="50" y1="40" x2="75" y2="60" stroke="white" stroke-width="2" />
+            <line x1="50" y1="70" x2="35" y2="110" stroke="white" stroke-width="2" />
+            <line x1="50" y1="70" x2="65" y2="110" stroke="white" stroke-width="2" />
+            
+            <!-- Labels -->
+            <text x="0" y="40" class="label">Shoulder Width [Poor]</text>
+            <text x="0" y="55" class="label">Chest Armor [Fluff]</text>
+            <text x="65" y="45" class="label">Arm Mass [Mid]</text>
+            <text x="65" y="90" class="label">Leg Foundation [Solid]</text>
+            <text x="0" y="100" class="label">Back Width [Pending]</text>
+        </svg>
+    </div>
+
+    <div class="ai-feedback">
+        > SYSTEM MESSAGE:<br>
+        Welcome back. You're still at 85kg. The "Hoodie Stealth" strategy is currently at 100% effectiveness, but your actual "Beach Readiness" is at 4%. Pick up the dumbbells or stop wasting my electricity.
+    </div>
+</div>
+
+</body>
+</html>
