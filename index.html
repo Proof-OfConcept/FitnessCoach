@@ -9,21 +9,58 @@
             padding: 20px;
         }
 
-        /* This is the SPECIFIC box for the Rank */
+        /* This container keeps the top boxes in one row */
+        .top-row {
+            display: flex;
+            gap: 20px; /* Space between the separate boxes */
+            align-items: flex-start;
+        }
+
+        /* Updated Rank Box (Larger) */
         .rank-box {
-            display: inline-block; /* Makes the box only as wide as the text */
-            padding: 10px 20px;
-            border: 1.5px solid #404040; /* Grey highlight border from your sketch */
-            border-radius: 8px;
+            padding: 15px 30px; /* Increased size like you asked */
+            border: 1.5px solid #404040;
+            border-radius: 10px;
             background-color: #1a1a1a;
+            font-weight: bold;
+        }
+
+        /* Box 2: The Navigation Box */
+        .nav-box {
+            padding: 15px 25px;
+            border: 1.5px solid #404040;
+            border-radius: 10px;
+            background-color: #1a1a1a;
+            display: flex;
+            gap: 15px; /* Space between Home, Food, etc. */
+        }
+
+        .nav-item {
+            color: #aaa; /* Slightly faded so it looks like a menu */
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        /* This highlights the "Active" page (Home) */
+        .active {
+            color: #4a90e2; 
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <!-- Box 1 from your drawing -->
-    <div class="rank-box">
-        Rank: Chunky
+    <div class="top-row">
+        <div class="rank-box">
+            Rank: Chunky
+        </div>
+
+        <div class="nav-box">
+            <span class="nav-item active">Home</span>
+            <span class="nav-item">Food</span>
+            <span class="nav-item">Fitness</span>
+            <span class="nav-item">AI</span>
+        </div>
     </div>
 
 </body>
