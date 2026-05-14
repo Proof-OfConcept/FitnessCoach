@@ -3,61 +3,27 @@
 <head>
     <style>
         body {
-            background-color: #121212; /* Softer dark grey */
+            background-color: #121212;
             color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Cleaner, friendly font */
-            margin: 0;
+            font-family: sans-serif;
             padding: 20px;
         }
 
-        /* This is the top bar from your drawing */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            background-color: #1e1e1e; /* Slightly lighter box */
-            border-radius: 12px;       /* Friendly rounded corners */
-            border: 1px solid #333;    /* Subtle outline */
-        }
-
-        .rank-text {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .level-container {
-            text-align: right;
-        }
-
-        /* The XP Bar */
-        .xp-bar-bg {
-            width: 150px;
-            height: 10px;
-            background-color: #333;
-            border-radius: 5px;
-            margin-top: 5px;
-            overflow: hidden;
-        }
-
-        .xp-bar-fill {
-            width: 75%; /* This matches the 75/100 in your drawing */
-            height: 100%;
-            background-color: #4a90e2; /* Friendly blue */
+        /* This is the SPECIFIC box for the Rank */
+        .rank-box {
+            display: inline-block; /* Makes the box only as wide as the text */
+            padding: 10px 20px;
+            border: 1.5px solid #404040; /* Grey highlight border from your sketch */
+            border-radius: 8px;
+            background-color: #1a1a1a;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <div class="rank-text">Rank: Chunky</div>
-        
-        <div class="level-container">
-            <div>75/100 XP | Level 1</div>
-            <div class="xp-bar-bg">
-                <div class="xp-bar-fill"></div>
-            </div>
-        </div>
+    <!-- Box 1 from your drawing -->
+    <div class="rank-box">
+        Rank: Chunky
     </div>
 
 </body>
